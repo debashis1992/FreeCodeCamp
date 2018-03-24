@@ -1,0 +1,50 @@
+html,body {
+    height: 100%;
+    background-color: #dddddd;
+}
+div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+button {
+    border-radius: 50%;
+}
+
+#clock-timer-button {
+    /*width: 140px;*/
+  display:block;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 1px solid rgb(122, 52, 52);
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+  padding-top: 0%;
+  font-family: 'Pacifico', cursive;
+}
+#heading1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+}
+.div {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    max-height: 110px;
+}
+.btn-primary-outline {
+    background-color: transparent;
+    border-color: #ccc;
+    border-radius: 50%;
+}
