@@ -1,0 +1,45 @@
+body {
+ background: #C33764;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.main-content {
+  text-align: center;
+  background: #C33764;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#response {
+  margin-top : 20px;
+  margin-left: 20px;
+  margin-right : 20px;
+}
+.atag:hover {
+  background-color:transparent;
+}
+#heading1{ 
+  margin-top:20px;
+  color:white;
+  font-family: 'Risque', cursive;
+  font-size : 50px;
+}
+.link {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size:20px;
+}
+.links:hover {
+  background:#adf6dc;
+}
+#searchbtn {
+  font-family: 'Roboto Slab', serif;
+}
+.luckybtn {
+  font-family: 'Roboto Slab', serif;
+}
+#input1 {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}

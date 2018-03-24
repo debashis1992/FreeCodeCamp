@@ -1,0 +1,29 @@
+html {
+  margin-top: 20px;
+  background-color : #1e1e1e; 
+}
+div.main-content {
+  text-align: center;
+  background-color : #1e1e1e; 
+  
+  font-size : 40px;
+  color : white;
+}
+#main-heading {
+    font-size : 40px;
+    font-family: 'Indie Flower', cursive;  
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+#tempScale {
+  /*border-radius:  50%;*/
+  background-color : #1e1e1e;
+   font-family: 'Abel', sans-serif;
+}
+#response {
+    font-family: 'Abel', sans-serif;
+    font-size: 30px;
+}

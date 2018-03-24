@@ -1,0 +1,50 @@
+#welcome_text {
+  font-family: 'Oswald', sans-serif;
+   font-size: 20px;
+}
+
+#likes {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size:20px;
+}
+#about {
+  background-image: url("https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?auto=format&fit=crop&w=751&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  color: white;
+}
+
+#activities {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#projects {
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  color:white;
+  background-image: url("https://images.unsplash.com/photo-1500829243541-74b677fecc30?auto=format&fit=crop&w=755&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+}
+#project_end {
+  text-align: center;
+}
+#contact {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size:20px;
+  color:white;
+  background-image: url("https://images.unsplash.com/photo-1500829243541-74b677fecc30?auto=format&fit=crop&w=755&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+}
+#heading_projects {
+  text-align:center;
+  font-weight:bold;
+}
+#heading_contact {
+  text-align: center;
+  font-weight:bold;
+}
+form {
+  text-align:center;
+  
+}
+img {
+  width:100%;
+  height:auto;
+  border-radius: 50%;
+}
