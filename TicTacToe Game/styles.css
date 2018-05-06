@@ -1,0 +1,62 @@
+.rows {
+    padding-left: 500px;
+    padding-right: 500px;
+    /* padding-left: 5em;
+    width: 366px;
+    height: 100px; */
+}
+.columns {
+    font-weight: bolder;
+    font-family: 'Pangolin', cursive;
+    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+}
+#heading {
+    text-align: center;
+    font-family: 'Pangolin', cursive;
+    padding-bottom: 5px;
+}
+.cells {
+    text-align: center;
+
+}
+
+/* added from JSFiddle*/
+#id_confrmdiv
+{
+    font-family: 'Pangolin', cursive;
+    display: none;
+    background-color: #eee;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    position: fixed;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+    padding: 6px 8px 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+#id_confrmdiv button {
+    background-color: #D6E0F6;
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid #aaa;
+    padding: 2px;
+    text-align: center;
+    width: 80px;
+    cursor: pointer;
+}
+#id_confrmdiv button:hover
+{
+    background-color: #CBFFED;
+}
+#confirmBox .message
+{
+    text-align: left;
+    margin-bottom: 8px;
+}
