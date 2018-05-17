@@ -43,30 +43,6 @@ function start_game() {
     }
     game.newArr = [];
     game.userInputGiven = false;
-    $("button").on("click", function () {
-        //console.log("Button pressed!!!"+ event.target.id);
-        switch (event.target.id) {
-            case "top":
-                game.newArr.push(0);
-                userSelection(myArr);
-                break;
-            case "left":
-                game.newArr.push(1);
-                userSelection(myArr);
-                break;
-            case "right":
-                game.newArr.push(2);
-                userSelection(myArr);
-                break;
-            case "bottom":
-                game.newArr.push(3);
-                userSelection(myArr);
-                break;
-            default:
-                break;
-        }
-    });
-
     
     
 }
