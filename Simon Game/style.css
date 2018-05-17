@@ -1,0 +1,29 @@
+
+body {
+    text-align: center;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-btn {
+    margin-bottom: 10px;
+    border-radius: 50%;
+    height: 5em;
+    width: 5em;
+    background-color: #f0ffff;
+    border: 1px solid darkslategrey;
+}
+
+#top:hover {
+    background-color: #b22222!important;
+}
+#left:hover {
+    background-color: #228b22!important;
+}
+#right:hover {
+    background-color: #191970!important;
+}
+#bottom:hover {
+    background-color:#daa520!important;
+}
