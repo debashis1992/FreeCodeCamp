@@ -17,11 +17,18 @@ strict_mode.addEventListener("click", function () {
     alert("strict mode is turned on!!!");
 });
 
-/* Buttons */
-// var top_btn = document.getElementById("top");
-// var right = document.getElementById("right");
-// var left = document.getElementById("left");
-// var bottom = document.getElementById("bottom");
+$("#top").on("click", function () {
+    game.newArr.push(0);
+});
+$("#left").on("click", function () {
+    game.newArr.push(1);
+});
+$("#right").on("click", function () {
+    game.newArr.push(2);
+});
+$("#bottom").on("click", function () {
+    game.newArr.push(3);
+});
 
 var arr = [0, 1, 2, 3];
 var game = {
@@ -31,29 +38,66 @@ var game = {
     level: 1,
     newArr: [],
     numberOfTurns: 0,
-    userInputGiven: false
+    userInputGiven: false,
+    interval: 0,
+    computer_arr: [],
 };
 
 function start_game() {
-    if (game.computer_turn) {
-        var myArr = generateRandomNumberBasedOnLevel();
-        for (var i = 0; i < myArr.length; i++) {
-            changeColorSlowly(myArr[i]);
-        }
-    }
+    game.computer_arr = [];
+    game.computer_arr = generateRandomNumberBasedOnLevel();
     game.newArr = [];
     game.userInputGiven = false;
-    
-    
+    function resolveAfter5Seconds(x) {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve(x);
+            }, 4000);
+        });
+    }
+    for (var i = 0; i < game.computer_arr.length; i++) {
+        changeColorSlowly(game.computer_arr[i]);
+    }
+
+    async function f1() {
+        var x = await resolveAfter5Seconds(5);
+        if (checkInput()) {
+            //move to next level
+            game.level++;
+            game.score++;
+            start_game();
+        } else {
+            console.log("Invalid input. Game ended!!");
+        }
+    }
+    f1();
+
+
+}
+
+function checkInput() {
+    var result = null;
+    if (game.newArr.length > 0)
+        result = game.newArr.length;
+    else result = 0;
+    clearInterval(game.interval);
+    game.interval = 0;
+    //console.log("check input result : "+result);
+    if (result > 0 && userSelection(game.computer_arr))
+        return true;
+    else return false;
+
 }
 
 function userSelection(myArr) {
     var count = myArr.length;
     for (var i = 0; i < game.newArr.length; i++) {
-        if (game.newArr[i] !== myArr[i])
+        if (game.newArr[i] !== myArr[i]) {
+            console.log("not equal");
             return false;
+        }
     }
-    console.log("equal");
+
     return true;
 }
 
