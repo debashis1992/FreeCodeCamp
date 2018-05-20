@@ -44,10 +44,19 @@ var game = {
 };
 
 function start_game() {
-    game.computer_arr = [];
-    game.computer_arr = generateRandomNumberBasedOnLevel();
     game.newArr = [];
     game.userInputGiven = false;
+    game.computer_arr = [];
+    game.computer_arr = generateRandomNumberBasedOnLevel();
+    
+    function change() {
+        return new Promise(resolve => {
+            for (var i = 0; i < game.computer_arr.length; i++) {
+                setTimeout(changeColorSlowly(game.computer_arr[i]),1000);
+            }
+            resolve("1");
+        });
+    }
     function resolveAfter5Seconds(x) {
         return new Promise(resolve => {
             setTimeout(() => {
@@ -55,12 +64,8 @@ function start_game() {
             }, 4000);
         });
     }
-    for (var i = 0; i < game.computer_arr.length; i++) {
-        changeColorSlowly(game.computer_arr[i]);
-    }
-
     async function f1() {
-        var x = await resolveAfter5Seconds(5);
+        var x = [await change(),await resolveAfter5Seconds(5)];
         if (checkInput()) {
             //move to next level
             game.level++;
@@ -68,13 +73,12 @@ function start_game() {
             start_game();
         } else {
             console.log("Invalid input. Game ended!!");
+            gameIsStarted = false;
         }
     }
     f1();
 
-
 }
-
 function checkInput() {
     var result = null;
     if (game.newArr.length > 0)
@@ -105,20 +109,20 @@ function changeColorSlowly(i) {
     var myArr = ["#b22222", "#228b22", "#191970", "#daa520", "#f0ffff"];
     switch (i) {
         case 0:
-            $("#top").animate({ backgroundColor: myArr[i] }, 300)
-                .animate({ backgroundColor: myArr[myArr.length - 1] }, 300);
+            $("#top").animate({ backgroundColor: myArr[i],duration: 300, queue:false })
+                .animate({ backgroundColor: myArr[myArr.length - 1],  duration:300, queue:false });
             break;
         case 1:
-            $("#left").animate({ backgroundColor: myArr[i] }, 300)
-                .animate({ backgroundColor: myArr[myArr.length - 1] }, 300);
+            $("#left").animate({ backgroundColor: myArr[i] , duration: 300, queue : false })
+                .animate({ backgroundColor: myArr[myArr.length - 1], duration: 300, queue: false });
             break;
         case 2:
-            $("#right").animate({ backgroundColor: myArr[i] }, 300)
-                .animate({ backgroundColor: myArr[myArr.length - 1] }, 300);
+            $("#right").animate({ backgroundColor: myArr[i] , duration:300, queue:false })
+                .animate({ backgroundColor: myArr[myArr.length - 1] , duration:300, queue:false });
             break;
         case 3:
-            $("#bottom").animate({ backgroundColor: myArr[i] }, 300)
-                .animate({ backgroundColor: myArr[myArr.length - 1] }, 300);
+            $("#bottom").animate({ backgroundColor: myArr[i] ,duration:300, queue:false })
+                .animate({ backgroundColor: myArr[myArr.length - 1] ,duration:300, queue:false });
             break;
         default:
             break;
